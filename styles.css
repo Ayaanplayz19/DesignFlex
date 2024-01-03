@@ -148,18 +148,58 @@ h3{
     
 }
 
+@media only screen and (max-width: 600px) {
+  /* Styles for small screens (e.g., mobile) */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for medium screens (e.g., tablets) */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Styles for large screens (e.g., desktop) */
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .image-container {
     display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    margin: 10px;
     justify-content: center; /* Center the images horizontally */
-    align-items: center; /* Center the images and text vertically */
-    margin: 10px; /* Adjust the margin around the entire container */
 }
 
 .image-container > div {
     text-align: center;
-    margin: 0 40px; /* Adjust the margin between each image and text */
+    margin-bottom: 10px;
 }
 
+.image-container img {
+    width: 300%; /* Make images fill their container */
+    max-width: 350px; /* Limit the maximum width of the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px;
+    margin: 40px; /* Adjust the margin around the entire container */
+}
+
+.image-container p {
+    margin: 0;
+}
+
+@media (min-width: 600px) {
+    .image-container {
+        flex-direction: row; /* Align items horizontally for larger screens */
+    }
+
+    .image-container > div {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+}
 .image-container img {
     width: 250px; /* Adjust the width of the images as needed */
     display: block; /* Prevents extra space below the image */
